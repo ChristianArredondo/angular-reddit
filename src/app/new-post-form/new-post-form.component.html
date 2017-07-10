@@ -1,0 +1,22 @@
+<form>
+  <h2>Add a Link</h2>
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input type="text"
+           class="form-control"
+           id="title"
+           #titleInput>
+  </div>
+  <div class="form-group">
+    <label for="link">Link:</label>
+    <input type="text"
+           class="form-control"
+           id="link"
+           #linkInput>
+  </div>
+  <!--Capture form data to be pushed to New Post component-->
+  <button type="button"
+          class="btn btn-primary"
+          (click)="onNewPost(titleInput, linkInput)">Submit</button>
+</form>
+
