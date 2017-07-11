@@ -13,9 +13,9 @@ posts: Post[];
 
   constructor() {
     this.posts = [
-      new Post('Angular 4', 'http://angular.io', 3),
-      new Post('Front-End', 'http://carredondo.site', 2),
-      new Post('Texas Longhorns', 'http://utexas.edu', 4)
+      new Post('Angular 4', 'http://angular.io', 18),
+      new Post('Front-End', 'http://carredondo.site', 23),
+      new Post('Texas Longhorns', 'http://utexas.edu', 15)
     ]
   }
 

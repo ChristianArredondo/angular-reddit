@@ -10,9 +10,8 @@
       <app-new-post-form (addPost)="onPostAdded($event)"></app-new-post-form>
     </div>
   </div>
-
-  <app-reddit-post *ngFor="let post of sortedPosts()"
-                   [post]="post"></app-reddit-post>
+  <app-reddit-post
+    *ngFor="let post of sortedPosts()"
+    [post]="post"></app-reddit-post>
   <br>
-
 </div>
