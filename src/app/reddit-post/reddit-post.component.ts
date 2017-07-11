@@ -8,10 +8,21 @@ import {Component, Input, OnInit} from '@angular/core';
 export class RedditPostComponent implements OnInit {
   @Input() postTitle: string;
   @Input() postLink: string;
+  @Input() postVotes: number;
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit() {
+  }
+
+  voteUp() {
+    this.postVotes ++;
+  }
+
+  voteDown() {
+    this.postVotes --;
   }
 
 }

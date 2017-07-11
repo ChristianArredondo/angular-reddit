@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NewPostFormComponent } from './new-post-form/new-post-form.component';
-import { PostComponent } from './post/post.component';
 import { RedditPostComponent } from './reddit-post/reddit-post.component';
 
 @NgModule({

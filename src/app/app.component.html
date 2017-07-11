@@ -11,8 +11,10 @@
     </div>
   </div>
 
-  <app-reddit-post *ngFor="let redditPost of redditPosts"
+  <app-reddit-post *ngFor="let redditPost of sortedPosts()"
                    [postTitle]="redditPost.title"
-                   [postLink]="redditPost.link"></app-reddit-post>
+                   [postLink]="redditPost.link"
+                   [postVotes]="redditPost.votes"></app-reddit-post>
+  <br>
 
 </div>

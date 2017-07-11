@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,13 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  redditPosts = [{title: 'test', link: 'test-link'}];
+  @Input() redditPosts = [{title: 'Went to the movies this weekend and saw this', link: 'imgur.com', votes: 0}];
 
   onPostAdded(newPost: {postTitle: string, linkAddress: string}) {
     this.redditPosts.push({
       title: newPost.postTitle,
-      link: newPost.linkAddress
+      link: newPost.linkAddress,
+      votes: 0
     })
+  }
+
+  sortedPosts() {
+    return this.redditPosts.sort(((a, b) => b.votes - a.votes))
   }
 
 }
