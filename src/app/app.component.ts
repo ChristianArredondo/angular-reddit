@@ -1,4 +1,7 @@
 import { Component, Input } from '@angular/core';
+import {Post} from './reddit-post/post.model'
+
+
 
 @Component({
   selector: 'app-root',
@@ -6,18 +9,24 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  @Input() redditPosts = [{title: 'Went to the movies this weekend and saw this', link: 'imgur.com', votes: 0}];
+posts: Post[];
+
+  constructor() {
+    this.posts = [
+      new Post('Angular 4', 'http://angular.io', 3),
+      new Post('Front-End', 'http://carredondo.site', 2),
+      new Post('Texas Longhorns', 'http://utexas.edu', 4)
+    ]
+  }
 
   onPostAdded(newPost: {postTitle: string, linkAddress: string}) {
-    this.redditPosts.push({
-      title: newPost.postTitle,
-      link: newPost.linkAddress,
-      votes: 0
-    })
+    this.posts.push(new Post(newPost.postTitle, newPost.linkAddress, 0));
+    newPost.postTitle = '';
+    newPost.linkAddress = '';
   }
 
   sortedPosts() {
-    return this.redditPosts.sort(((a, b) => b.votes - a.votes))
+    return this.posts.sort(((a: Post, b: Post) => b.votes - a.votes))
   }
 
 }

@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Post} from './post.model'
 
 @Component({
   selector: 'app-reddit-post',
@@ -6,9 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./reddit-post.component.css']
 })
 export class RedditPostComponent implements OnInit {
-  @Input() postTitle: string;
-  @Input() postLink: string;
-  @Input() postVotes: number;
+  @Input() post: Post;
 
   constructor() {
 
@@ -18,11 +17,11 @@ export class RedditPostComponent implements OnInit {
   }
 
   voteUp() {
-    this.postVotes ++;
+    this.post.voteUp();
   }
 
   voteDown() {
-    this.postVotes --;
+    this.post.voteDown();
   }
 
 }
