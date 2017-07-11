@@ -1,6 +1,6 @@
 # AngularReddit
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
+This app is a rudimentary version of Reddit, allowing you to post links that are then auto-arranged based on how many upvotes they have. The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
 
 ## Development server
 
@@ -26,3 +26,5 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+![Alt text](/assets/Angular-Reddit-Screenshot.png?raw=true "Screenshot")
