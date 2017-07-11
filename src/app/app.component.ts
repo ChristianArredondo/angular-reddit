@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import {Post} from './reddit-post/post.model'
+import { Component } from '@angular/core';
+import { Post } from './reddit-post/post.model'
 
 
 
@@ -20,9 +20,11 @@ posts: Post[];
   }
 
   onPostAdded(newPost: {postTitle: string, linkAddress: string}) {
-    this.posts.push(new Post(newPost.postTitle, newPost.linkAddress, 0));
-    newPost.postTitle = '';
-    newPost.linkAddress = '';
+    if (newPost.postTitle.length && newPost.linkAddress.length) {
+      this.posts.push(new Post(newPost.postTitle, newPost.linkAddress, 0));
+      newPost.postTitle = '';
+      newPost.linkAddress = '';
+    }
   }
 
   sortedPosts() {
