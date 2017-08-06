@@ -1,4 +1,4 @@
-![alt text](https://github.com/ChristianArredondo/angular-reddit/blob/master/redd-app-demo.gif)
+![alt text](https://github.com/ChristianArredondo/angular-reddit/blob/master/reddit-app-demo.gif)
 
 # AngularReddit
 
